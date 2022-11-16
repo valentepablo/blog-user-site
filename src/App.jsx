@@ -17,7 +17,9 @@ function App() {
     <>
       <h1 className='text-center mb-6 text-3xl font-semibold'>Blog</h1>
       <div className='bg-amber-50/70 max-w-3xl mx-auto rounded-md shadow p-10 space-y-8'>
-        {posts.length > 0 && posts.map((post) => <BlogPost post={post} key={post.title} />)}
+        {posts.length > 0
+          ? posts.map((post) => <BlogPost post={post} key={post.title} />)
+          : 'No hay posts...'}
       </div>
     </>
   );
